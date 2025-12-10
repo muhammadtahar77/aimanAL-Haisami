@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أيمن الهيصمي للخدمات والمقاولات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* عام */
+body {
+    margin:0;
+    font-family:'Cairo',sans-serif;
+    background:#f2f6fa;
+    color:#000000;
+    scroll-behavior:smooth;
+}
+a{text-decoration:none;}
+/* رأس الصفحة */
+header {
+    position:relative;
+    background:linear-gradient(135deg,#0f2147,#2e5aa3);
+    color:#ffd700;
+    text-align:center;
+    padding:120px 20px;
+    overflow:hidden;
+}
+header h1 {
+    font-size:3.5em;
+    margin-bottom:20px;
+    opacity:0;
+    animation:slideDown 1.2s forwards;
+}
+header p {
+    font-size:1.3em;
+    max-width:1000px;
+    margin:auto;
+    opacity:0;
+    animation:fadeIn 2s forwards 0.5s;
+}
+header::after {
+    content:"";
+    background:url('https://images.unsplash.com/photo-1581092338165-87c1ab7b9f88?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    opacity:0.1;
+    z-index:0;
+}
+header *{position:relative; z-index:1;}
+@keyframes slideDown{from{opacity:0;transform:translateY(-50px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* التنقل */
+nav{
+    background:#2e5aa3;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav a{
+    color:#ffd700;
+    margin:10px 20px;
+    font-weight:bold;
+    font-size:1.1em;
+    transition:0.3s;
+}
+nav a:hover{color:#fff;}
+
+/* الأقسام */
+section{
+    padding:100px 20px;
+    max-width:1200px;
+    margin:auto;
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s ease;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+}
+section.visible{opacity:1; transform:translateY(0);}
+section:nth-child(even){background-color:#717171;}
+section h2{
+    font-size:2.4em;
+    margin-bottom:20px;
+    color:#0f2147;
+    width:100%;
+    text-align:center;
+}
+section p{
+    line-height:1.8;
+    font-size:1.15em;
+    margin-bottom:15px;
+}
+
+/* الصور */
+.section-img{
+    width:48%;
+    max-height:400px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:20px;
+    transition:transform 1s ease;
+}
+.section-img:hover{transform:scale(1.07);}
+
+/* أيقونات مربعات */
+.icon-box{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    background:#ffd700;
+    color:#0f2147;
+    margin:5px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.5em;
+    transition:all 0.3s;
+}
+.icon-box:hover{transform:scale(1.2); background:#6f6262; color:#2e5aa3;}
+
+/* تفاعل التواصل */
+.contact-icons{margin-top:20px;text-align:center;}
+.contact-icons i{
+    font-size:2em;
+    color:#27251b;
+    margin:0 15px;
+    transition:transform 0.3s,color 0.3s;
+}
+.contact-icons i:hover{transform:scale(1.2); color:#fff;}
+
+/* الفوتر */
+footer{
+    background:#0f2147;
+    color:#ffd700;
+    text-align:center;
+    padding:50px 20px;
+}
+footer a{margin:0 15px; font-size:2em; color:#ffd700; transition:0.3s;}
+footer a:hover{color:#fff;}
+
+/* استجابة */
+@media(max-width:992px){.section-img{width:100%; margin-bottom:30px;}}
+@media(max-width:768px){header h1{font-size:2.2em;} section h2{font-size:1.7em;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>أيمن الهيصمي للخدمات والمقـــــــــــــــاولات</h1>
+<p>مرحلة متكاملة من الجودة والاحترافية والتميز في كل مشروع. اكتشف خبراتنا، خدماتنا، مشاريعنا وفريق العمل الذي يصنع الفارق.</p>
+</header>
+
+<nav>
+<a href="#about">نبذة</a>
+<a href="#who">من نحن</a>
+<a href="#vision">رؤيتنا</a>
+<a href="#mission">رسالتنا</a>
+<a href="#values">قيمنا</a>
+<a href="#services">خدماتنا</a>
+<a href="#projects">مشاريعنا</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+
+<!-- نبذة -->
+<section id="about">
+
+<div>
+<h2>نبذة تعريفية</h2>
+<p>منذ البداية، كانت الرغبة في الإتقان هي الدافع نحو تقديم أعمال متكاملة تجمع بين الدقة في التنفيذ والابتكار في الحلول. نطبق معايير السلامة والجودة في كل تفصيل، لصناعة إنجازات تحمل بصمة احترافية وموثوقية عالية. الهدف هو تقديم مشاريع تتماشى مع العصر وتُسهم في تطوير المجتمع والبنية التحتية، مع بناء ثقة مستدامة مع العملاء وتحقيق تكامل بين الفكر الهندسي والرؤية الحديثة.</p>
+<div>
+</section>
+
+<!-- من نحن -->
+<section id="who">
+<img class="section-img" src="aiman/1.jpg" alt="من نحن">
+<div>
+<h2>من نحن</h2>
+<p>نؤمن بأن النجاح يبدأ من وضوح الرؤية والعمل المتقن. يضم الفريق مهندسين وفنيين وإداريين متخصصين بروح التعاون والمسؤولية لتحقيق نتائج متميزة في كل مشروع. كل مشروع يعكس خبرة وكفاءة الفريق ويلبي احتياجات العملاء ويحوّل الأفكار إلى واقع ملموس. الالتزام بالدقة والجودة شعارنا الدائم.</p>
+</div>
+</section>
+
+<!-- رؤيتنا -->
+<section id="vision">
+<div>
+<h2>رؤيتنا</h2>
+<p>نسعى لأن نكون جزءًا فاعلًا في التنمية العمرانية والخدمات الحديثة، عبر مشاريع ترتكز على التخطيط والدقة والجودة. نطمح للريادة في تقديم خدمات مبتكرة تواكب تطلعات المجتمع وتحقق الاستدامة في الأداء والنتائج.</p>
+</div>
+<img class="section-img" src="aiman/37.jpg" alt="رؤيتنا">
+</section>
+
+<!-- رسالتنا -->
+<section id="mission">
+<img class="section-img" src="aiman/46.jpg" alt="رسالتنا">
+<div>
+<h2>رسالتنا</h2>
+<p>تقديم أعمال متقنة تعكس قيم الالتزام والجودة في كل خطوة. الهدف ليس مجرد تنفيذ المشاريع، بل تحقيق إنجاز مستدام يعكس المسؤولية والموثوقية في العمل.</p>
+</div>
+</section>
+
+<!-- قيمنا -->
+<section id="values">
+<div>
+<h2>قيمنا</h2>
+<p>الجودة – الالتزام – الشفافية – الابتكار – رضا العميل – الاستدامة. هذه القيم تمثل أساس كل عمل وتوجه كل قرار لضمان النجاح والاستمرارية.</p>
+</div>
+<img class="section-img" src="aiman/41.jpg" alt="قيمنا">
+</section>
+
+<!-- خدماتنا -->
+<section id="services">
+<img class="section-img" src="aiman/22.jpg" alt="خدماتنا">
+<div>
+<h2>خدماتنا</h2>
+<p>تشمل خدماتنا تصميم وتنفيذ المشاريع الإنشائية، الصيانة، التشغيل، والإشراف الهندسي. نقدم حلولاً متكاملة تضمن الجودة والدقة وتلبي متطلبات العملاء بشكل كامل.</p>
+</div>
+</section>
+
+<!-- مشاريعنا -->
+<section id="projects">
+<div>
+<h2>مشاريعنا</h2>
+<p>كل مشروع يتم تنفيذه هو قصة نجاح نعتز بها، تجمع بين التنظيم والدقة والجودة. تنوعت مشاريعنا بين المباني السكنية والتجارية والمرافق العامة، لتعكس التزامنا بالتميز والإتقان.</p>
+</div>
+<img class="section-img" src="aiman/5.jpg" alt="مشاريعنا">
+</section>
+
+<!-- تواصل معنا -->
+<section id="contact">
+<img class="section-img" src="aiman/24.jpg" alt="تواصل معنا">
+<div>
+<h2>تواصل معنا</h2>
+<p>نرحب دائمًا بالتواصل لأي استفسار أو تعاون. الثقة والاحترافية أساس كل علاقة ناجحة.</p>
+<div class="contact-icons">
+<a href="mailto:aimanalhaisami2024@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="tel:+967773916348"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/967773916348"><i class="fab fa-whatsapp"></i></a>
+</div></div><style>
+    body {
+        font-family: "Tajawal", sans-serif;
+        background: #717171;
+        direction: rtl;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-box {
+        width: 90%;
+        max-width: 450px;
+        margin: 70px auto;
+        background: #505b67; /* أزرق غامق */
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(250, 250, 250, 0.2);
+        color: white;
+    }
+
+    .contact-box h2 {
+        text-align: center;
+        color: #d4a248; /* ذهبي */
+        margin-bottom: 20px;
+    }
+
+    .contact-box label {
+        color: #d4a248;
+        margin-bottom: 5px;
+        display: block;
+        font-size: 15px;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #88672a;
+        border-radius: 8px;
+        background: #27241c;
+        color: white;
+        margin-bottom: 15px;
+        font-size: 15px;
+        outline: none;
+    }
+
+    .contact-box input:focus,
+    .contact-box textarea:focus {
+        border-color: #ffcf6a;
+    }
+
+    .contact-box button {
+        width: 100%;
+        padding: 12px;
+        background: #d4a248;
+        border: none;
+        border-radius: 8px;
+        color: #0a1b33;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-box button:hover {
+        background: #f0c76f;
+    }
+</style>
+
+<div class="contact-box">
+    <h2>تواصل معنا</h2>
+
+    <form action="https://formsubmit.co/muhammadtahar266@email.com " method="POST" />
+
+
+
+        <input type="hidden" name="_subject" value="رسالة جديدة من موقع شركة المقاولات">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label>الاسم الكامل</label>
+        <input type="text" name="name" required placeholder="اكتب اسمك">
+
+        <label>رقم الهاتف</label>
+        <input type="tel" name="phone" required placeholder="771234567">
+
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required placeholder="name@mail.com">
+
+        <label>الرسالة</label>
+        <textarea name="message" rows="4" required placeholder="اكتب رسالتك هنا"></textarea>
+
+        <button type="submit">إرسال الطلب</button>
+    </form>
+</div>
+</div>
+</aside>
+</div>
+</section>
+</div>
+</section>
+
+<footer>
+<p>© 2025 أيمن الهيصمي للخدمات والمقاولات. جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+// ظهور الأقسام عند التمرير
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    sections.forEach(section=>{
+        const rect=section.getBoundingClientRect();
+        if(rect.top<window.innerHeight-100){section.classList.add('visible');}
+    });
+});
+</script>
+
+</body>
+</html>
